@@ -338,6 +338,37 @@ footer{background:var(--green);color:#9fb1ab;font-size:13px;text-align:center;pa
 .results-grid span{font-size:14px;color:var(--muted)}
 .results-grid em{font-style:normal;color:#2e7d32;font-weight:600;margin-left:4px}
 @media(max-width:760px){.results-grid{grid-template-columns:1fr 1fr}}
+/* UGC system */
+.ugc{background:var(--paper-2)}
+.ugc-thesis{font:italic 300 clamp(24px,2.8vw,32px)/1.3 var(--serif);color:var(--green);max-width:30ch}
+.ugc-why{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px);align-items:start}
+.ugc-why .copy{display:grid;gap:14px;font-size:16px;color:var(--muted)}
+@media(max-width:860px){.ugc-why{grid-template-columns:1fr}}
+.ugc-steps{list-style:none;padding:0;margin:48px 0 0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.ugc-steps li{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:8px;align-content:start;min-width:0}
+.ugc-steps .n{font:400 30px/1 var(--serif);color:var(--brass)}
+.ugc-steps h4{font:500 18px/1.25 var(--serif)}
+.ugc-steps p{font-size:14px;color:var(--muted)}
+@media(max-width:980px){.ugc-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.ugc-steps{grid-template-columns:1fr}}
+.ugc-two{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(28px,4vw,64px);margin-top:56px;align-items:start}
+@media(max-width:860px){.ugc-two{grid-template-columns:1fr}}
+.ugc h3{font:400 clamp(24px,2.6vw,30px)/1.15 var(--serif);margin-bottom:16px}
+.ugc dl{margin:0}
+.ugc dl div{display:grid;grid-template-columns:9.5rem 1fr;gap:4px 18px;padding:12px 0;border-top:1px solid var(--line)}
+.ugc dl div>*{margin:0;min-width:0}
+.ugc dt{font-weight:600;font-size:15px}
+.ugc dd{font-size:15px;color:var(--muted)}
+.ugc dd small{display:block;margin-top:4px;font:600 11px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+@media(max-width:560px){.ugc dl div{grid-template-columns:1fr}}
+.ugc-src{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ugc-src div{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;gap:6px}
+.ugc-src b{font:500 17px/1.2 var(--serif)}
+.ugc-src p{font-size:14px;color:var(--muted)}
+@media(max-width:760px){.ugc-src{grid-template-columns:1fr}}
+.ugc-pitch{margin-top:56px;background:var(--green);color:var(--paper);border-radius:var(--r);padding:clamp(24px,4vw,40px)}
+.ugc-pitch .eyebrow{color:var(--brass-2)}
+.ugc-pitch p{font:400 clamp(19px,2vw,23px)/1.5 var(--serif);margin-top:14px;max-width:62ch}
 /* Caviar Star showcase */
 .cs{background:#07080c;color:#efe8da}
 .cs .eyebrow{color:#d9b871}
@@ -463,33 +494,6 @@ document.addEventListener('error', e => {
       <div><b>75%</b><span>Of priority keywords on page one of Google</span></div>
     </div>
 
-    <div class="past">
-      <article class="work">
-        <div class="live">
-          <img src="img/work/listing-story.jpg" alt="Scrolling listing page for 106 Steinmann Avenue">
-          <button type="button" class="live-btn" data-open="work/steinmann-story/index.html" data-title="106 Steinmann Avenue · Photo story">▶ Open the experience</button>
-        </div>
-        <div class="work-body">
-          <div class="k">Real estate · Listing marketing</div>
-          <h4>A listing that reads like a story</h4>
-          <p>A scroll-driven page for a brokerage listing. It walks buyers through the house room by room, with sound, and keeps the booking button in reach.</p>
-          <a href="work/steinmann-story/index.html" data-open="work/steinmann-story/index.html" data-title="106 Steinmann Avenue · Photo story">Open the full experience →</a>
-        </div>
-      </article>
-      <article class="work">
-        <div class="live">
-          <img src="img/work/listing-build.jpg" alt="3D build-up animation of the house from its foundation">
-          <button type="button" class="live-btn" data-open="work/steinmann-build/index.html" data-title="106 Steinmann Avenue · Build and reveal">▶ Watch it build</button>
-        </div>
-        <div class="work-body">
-          <div class="k">Real estate · Motion</div>
-          <h4>The house builds itself as you scroll</h4>
-          <p>The same listing rises from the foundation up, then the real photo wipes in over the finished drawing. The kind of page people send to each other.</p>
-          <a href="work/steinmann-build/index.html" data-open="work/steinmann-build/index.html" data-title="106 Steinmann Avenue · Build and reveal">Open the full experience →</a>
-        </div>
-      </article>
-    </div>
-    <p class="muted" style="margin-top:22px;font-size:14px;color:var(--muted)">For the brokerage I also wrote the blog, ran six social platforms and designed print and digital ad campaigns.</p>
   </div>
 </section>
 
@@ -633,6 +637,86 @@ document.addEventListener('error', e => {
       <figure><video src="caviar/turntables/turntable/50-year-aged-balsamic-vinegar.mp4" poster="caviar/turntables/posters/50-year-aged-balsamic-vinegar.webp" muted loop playsinline autoplay preload="none" aria-label="50-year balsamic turning"></video><figcaption>50-year balsamic</figcaption></figure>
     </div>
     <p class="muted" style="margin-top:14px;font-size:14px">Six of the 181 turntable loops. Each one is ten seconds and ready for a product page or an ad.</p>
+  </div>
+</section>
+
+<!-- ===================== UGC SYSTEM ===================== -->
+<section class="ugc" id="ugc">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Content strategy · proposal for Caviar Star</div>
+        <h2 style="margin-top:18px">The Test-and-Scale UGC System</h2>
+      </div>
+      <p class="lede">Build Caviar Star's own channels with real-person video. Let performance pick the winners. Put ad spend only behind what has already proven it works.</p>
+    </div>
+
+    <div class="ugc-why">
+      <p class="ugc-thesis">Caviar intimidates people. A real person tasting it on camera fixes that faster than any polished ad.</p>
+      <div class="copy">
+        <p>It's expensive, it comes with rules, and most shoppers worry about doing it wrong. User-generated content (UGC) is short, phone-shot video of real people using the product. It feels native on TikTok and Instagram, and it builds trust because it doesn't look like an ad.</p>
+        <p>Caviar Star also has a story most food brands would love to have: a family business since 1991, started by a husband-and-wife diving team. That story lands best in the casual, first-person style these platforms reward.</p>
+        <p>Timing helps. The holidays and New Year's Eve are peak caviar season. A system that starts now has proven ads ready to scale by December.</p>
+      </div>
+    </div>
+
+    <ol class="ugc-steps">
+      <li><span class="n">1</span><h4>Produce in batches</h4><p>8 to 12 short videos per cycle across several concepts and opening hooks. Phone-shot, natural light, real reactions.</p></li>
+      <li><span class="n">2</span><h4>Post on your own channels</h4><p>TikTok and Instagram, 3 to 5 posts a week. The brand owns the content and the audience it builds.</p></li>
+      <li><span class="n">3</span><h4>Give every video a fair test</h4><p>Each batch gets a small paid test budget, so we get clean data in days instead of weeks.</p></li>
+      <li><span class="n">4</span><h4>Scale the winners</h4><p>Videos that beat the batch average on hook rate and watch time get real ad spend. The rest get cut.</p></li>
+      <li><span class="n">5</span><h4>Learn and repeat</h4><p>Each batch builds on the hooks, formats and products that won last time. Every cycle gets sharper.</p></li>
+    </ol>
+
+    <div class="ugc-two">
+      <div>
+        <h3>What counts as a winner</h3>
+        <dl>
+          <div><dt>Hook rate</dt><dd>Share of viewers who watch past the first 3 seconds.</dd></div>
+          <div><dt>Watch time</dt><dd>Average seconds watched and completion rate.</dd></div>
+          <div><dt>Saves &amp; shares</dt><dd>The strongest organic signal. People keep and send what's useful or fun.</dd></div>
+          <div><dt>Click-through</dt><dd>How many viewers leave the video to visit the store.</dd></div>
+          <div><dt>Cost per purchase</dt><dd>Once a video has spend behind it, this decides whether it keeps running.</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>First batch: seven concepts</h3>
+        <dl>
+          <div><dt>First taste</dt><dd>A newcomer tries caviar on camera for the first time. The honest reaction does the selling.<small>American Wild Hackleback</small></dd></div>
+          <div><dt>How to actually eat it</dt><dd>Why a mother-of-pearl spoon, how much to take, what to drink with it.<small>Serving pieces and spoons</small></dd></div>
+          <div><dt>Beyond the blini</dt><dd>Caviar on kettle chips, deviled eggs, scrambled eggs, a baked potato.<small>Roe range and blinis</small></dd></div>
+          <div><dt>From the source</dt><dd>The family, the diving roots, how caviar is graded and packed in Ocean Isle Beach.<small>The family and the facility</small></dd></div>
+          <div><dt>Is it worth it?</dt><dd>A side-by-side tasting of three tiers, with plain talk about what the extra money buys.<small>Hackleback, Siberian, Osetra</small></dd></div>
+          <div><dt>The gift that impresses</dt><dd>Unboxing a gift set for a holiday host or an anniversary. Built for Q4.<small>Gift sets</small></dd></div>
+          <div><dt>Caviar myths</dt><dd>Quick, punchy corrections of what people get wrong. Cheap to make and very shareable.<small>Education</small></dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="ugc-two">
+      <div>
+        <h3>Where the content comes from</h3>
+        <div class="ugc-src">
+          <div><b>In-house</b><p>I film and edit the core batches. Fast, low-cost, on-brand.</p></div>
+          <div><b>UGC creators</b><p>Paid per video for footage the brand posts and runs as ads.</p></div>
+          <div><b>Customers</b><p>Reaction clips and reviews from real buyers, reshared with permission.</p></div>
+        </div>
+        <p style="margin-top:14px;font-size:14px;color:var(--muted)">Anything run as a paid ad gets written usage rights. Paid creator content is never presented as an unpaid customer review.</p>
+      </div>
+      <div>
+        <h3>First 90 days</h3>
+        <dl>
+          <div><dt>Days 1 to 30</dt><dd>Audit the current channels, set up tracking, film and post the first batch.</dd></div>
+          <div><dt>Days 31 to 60</dt><dd>Read the results, scale the first winners, film batch two around the winning hooks. Holiday gifting content goes live.</dd></div>
+          <div><dt>Days 61 to 90</dt><dd>Peak-season push on proven ads. A monthly report to the owners: what worked, what it cost, what's next.</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="ugc-pitch">
+      <div class="eyebrow">The 30-second version</div>
+      <p>I'd run your channels as a test-and-scale system. I produce UGC-style videos in batches, post them on your own TikTok and Instagram, and give each one a small test budget. The ones that prove they work get real ad spend. The rest get cut. You never pay to boost a guess, and you end up owning a content library and an audience instead of renting someone else's.</p>
+    </div>
   </div>
 </section>
 
