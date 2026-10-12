@@ -81,13 +81,12 @@ Bad AI caviar is the most common failure, and a caviar company will spot it inst
 
 ---
 
-## 6. `bump.jpg`
+## 6. `morning.jpg` (4:5, 1600×2000)
 
-**Where it goes:** Instagram post 5 ("The caviar bump").
-**Aspect:** 4:5 portrait, 1600×2000
+**Where it goes:** Instagram post 5 ("The morning after").
 **Midjourney:** `--ar 4:5 --style raw --v 7`
 
-> Close-up lifestyle photograph of a woman's left hand, relaxed and natural with five correct fingers, short neutral manicured nails and a thin gold ring. A small neat mound of glossy osetra caviar (distinct round olive-grey pearls with a golden sheen) sits on the back of her hand in the hollow between thumb and forefinger. She holds a mother-of-pearl spoon in her other hand just out of focus. Behind her are a blurred champagne coupe with tiny bubbles, a lit candle and the warm glow of a fall dinner party. She wears a cream cable-knit sweater sleeve. 85mm at f/1.8, warm candlelight from the right, creamy bokeh. The mood is playful, intimate and party-ready. Palette: warm skin tones, cream, amber, charcoal. Photorealistic editorial photography, subtle grain. No text, no logos.
+> Editorial food photograph of a breakfast plate the morning after a dinner party. A thick slice of golden buttered sourdough toast on a speckled cream stoneware plate, topped with soft, glossy, custardy scrambled eggs, a generous spoonful of osetra caviar on top (dark grey-brown pearls with a subtle golden sheen, glossy, slightly varied, not uniform beads, not bright gold) and a few snipped chives. A mother-of-pearl spoon rests on the plate. Next to it, a cup of black coffee in a handmade ceramic mug, a small open silver caviar tin with its lid leaning on it, and a half-full champagne coupe left over from last night. Rumpled oatmeal linen napkin, weathered oak table, soft cool morning window light from the left with gentle shadows, a few fallen autumn leaves on the sill. Camera at 35 degrees above the table, 50mm, f/2.8, the front of the toast sharp. Relaxed, cozy, a little indulgent. Palette: cream, golden toast, butter yellow, charcoal, forest green. Photorealistic magazine food photography, subtle grain. No text, no logos, no people.
 
 ---
 
