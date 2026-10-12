@@ -323,6 +323,21 @@ footer{background:var(--green);color:#9fb1ab;font-size:13px;text-align:center;pa
 .jump a:hover{border-color:var(--ink)}
 .jump b{font:400 13px/1 var(--serif);color:var(--brass);margin-right:6px}
 
+.sellers{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;margin:18px 0 0;font-size:15px;max-width:none}
+.sellers b{font-weight:600}
+.sellers span{color:var(--muted);flex-basis:100%}
+.results{border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:clamp(20px,3vw,32px);margin-bottom:40px}
+.results-head{display:grid;grid-template-columns:auto 1fr;gap:10px 28px;align-items:baseline;margin-bottom:22px}
+.results-head p{font-size:15px;color:var(--muted);max-width:60ch}
+@media(max-width:760px){.results-head{grid-template-columns:1fr}}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.results-grid div{border-radius:10px;padding:16px 18px;background:var(--paper)}
+.results-grid small{display:block;font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.r-fb small{color:#1b5bd6}.r-ig small{color:#b0237a}
+.results-grid b{display:block;font:400 clamp(26px,3vw,36px)/1.05 var(--serif);font-variant-numeric:tabular-nums}
+.results-grid span{font-size:14px;color:var(--muted)}
+.results-grid em{font-style:normal;color:#2e7d32;font-weight:600;margin-left:4px}
+@media(max-width:760px){.results-grid{grid-template-columns:1fr 1fr}}
 /* Caviar Star showcase */
 .cs{background:#07080c;color:#efe8da}
 .cs .eyebrow{color:#d9b871}
@@ -402,7 +417,7 @@ document.addEventListener('error', e => {
       <div>
         <div class="eyebrow">Marketing portfolio</div>
         <h1>I've sold it, I've marketed it, and I've <em>already started on yours.</em></h1>
-        <p class="lede">More than $1.5 million in online sales from my own ecommerce business. Social, content and video for a growing local brand. And a full set of campaign work for Caviar Star, built before anyone asked.</p>
+        <p class="lede">$2 million in combined online sales from my own ecommerce business. Social, content and video for a growing local brand. And a full set of campaign work for Caviar Star, built before anyone asked.</p>
         <div class="jump">
           <a href="#past"><b>01</b>How I've marketed</a>
           <a href="#now"><b>02</b>How I market now</a>
@@ -420,11 +435,12 @@ document.addEventListener('error', e => {
 
 <div class="wrap">
   <div class="proof">
-    <div><b>$1.5M+</b><span>in ecommerce sales, $750K in a single year</span></div>
-    <div><b>10</b><span>online marketplaces run from one warehouse</span></div>
-    <div><b>80+</b><span>agent websites for a real estate brokerage</span></div>
+    <div><b>$2M</b><span>in combined online sales</span></div>
+    <div><b>24,000 lb</b><span>of used books processed every week</span></div>
+    <div><b>6M+</b><span>Facebook views in 90 days for Calling All Dogs</span></div>
     <div><b>181</b><span>Caviar Star products rebuilt in 3D</span></div>
   </div>
+  <p class="sellers"><b>Amazon Pro Seller 5+ years</b> &amp; <b>eBay Top Rated Seller 5+ years</b><span>Other platforms include Shopify, WooCommerce, Etsy, AbeBooks, Alibris and Bonanza.</span></p>
 </div>
 
 <!-- ===================== HOW I'VE MARKETED ===================== -->
@@ -439,11 +455,11 @@ document.addEventListener('error', e => {
     </div>
 
     <div class="stat-grid">
-      <div><b>$1.5M+</b><span>Sales from my own ecommerce company, $750K of it in 2023</span></div>
-      <div><b>10,000+ lb</b><span>Product shipped every week from a 2,500 sq ft warehouse</span></div>
-      <div><b>10</b><span>Marketplaces with listings, photos and pricing I managed</span></div>
-      <div><b>+65%</b><span>Engagement across 6 social platforms for a real estate brokerage</span></div>
-      <div><b>10,000+</b><span>Monthly visitors to the Candlewood Lake Life blog I write</span></div>
+      <div><b>$2M</b><span>In combined online sales from my own ecommerce company</span></div>
+      <div><b>24,000 lb</b><span>Of used books processed every week</span></div>
+      <div><b>5+ years</b><span>As an Amazon Pro Seller and an eBay Top Rated Seller</span></div>
+      <div><b>80+</b><span>Agent websites managed for a real estate brokerage</span></div>
+      <div><b>10,000+</b><span>Monthly visitors to the Candlewood Lake Life blog I wrote</span></div>
       <div><b>75%</b><span>Of priority keywords on page one of Google</span></div>
     </div>
 
@@ -473,7 +489,7 @@ document.addEventListener('error', e => {
         </div>
       </article>
     </div>
-    <p class="muted" style="margin-top:22px;font-size:14px;color:var(--muted)">For the brokerage I also managed 80+ agent websites, wrote the blog, ran six social platforms and designed print and digital ad campaigns.</p>
+    <p class="muted" style="margin-top:22px;font-size:14px;color:var(--muted)">For the brokerage I also wrote the blog, ran six social platforms and designed print and digital ad campaigns.</p>
   </div>
 </section>
 
@@ -491,6 +507,18 @@ document.addEventListener('error', e => {
           <a class="btn btn-dark" href="https://www.instagram.com/callingalldogsny/" target="_blank" rel="noopener">Instagram I run →</a>
           <a class="btn btn-line" href="https://www.facebook.com/callingalldogsny/" target="_blank" rel="noopener">Facebook page I run →</a>
         </div>
+      </div>
+    </div>
+
+    <div class="results">
+      <div class="results-head"><div class="eyebrow">Last 90 days · from Meta's own insights</div><p>Short-form video is doing the heavy lifting: almost all of it is Reels, and almost all of it reaches people who don't follow yet.</p></div>
+      <div class="results-grid">
+        <div class="r-fb"><small>Facebook</small><b>6,069,904</b><span>views <em>↑ 92%</em></span></div>
+        <div class="r-fb"><small>Facebook</small><b>3,063,254</b><span>3-second views <em>↑ 90%</em></span></div>
+        <div class="r-fb"><small>Facebook</small><b>1,117 days</b><span>of total watch time <em>↑ 102%</em></span></div>
+        <div class="r-ig"><small>Instagram</small><b>1,054,725</b><span>account views</span></div>
+        <div class="r-ig"><small>Instagram</small><b>99.4%</b><span>of views from non-followers</span></div>
+        <div class="r-ig"><small>Instagram</small><b>99.6%</b><span>of views from Reels</span></div>
       </div>
     </div>
 
