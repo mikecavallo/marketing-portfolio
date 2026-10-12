@@ -1,0 +1,89 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Great Atlantic Spec Film</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
+<style>
+  /* Layout: a single dark "screening room" column, the vertical film as the hero, credits set like a film card below. */
+  :root {
+    color-scheme: dark;
+    --bg: #07080c;
+    --panel: #0e1016;
+    --ink: #efe8da;
+    --muted: #a69c8a;
+    --gold: #d9b871;
+    --gold-deep: #9c7536;
+    --display: 'Cinzel', 'Trajan Pro', Georgia, serif;
+    --serif: 'Cormorant Garamond', 'Garamond', Georgia, serif;
+  }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    line-height: 1.55;
+    padding-inline: 16px;
+    padding-block: 40px 56px;
+    background:
+      radial-gradient(ellipse 70% 40% at 50% 0%, rgba(217, 184, 113, 0.10), transparent 70%),
+      var(--bg);
+  }
+  .wrap { max-width: 980px; margin-inline: auto; display: grid; gap: 40px; }
+  header { text-align: center; display: grid; gap: 10px; justify-items: center; }
+  .eyebrow {
+    font-family: var(--display); font-size: 0.72rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--muted);
+  }
+  h1 {
+    font-family: var(--display); font-weight: 500; margin: 0;
+    font-size: clamp(1.9rem, 5.4vw, 3.3rem); letter-spacing: 0.16em; line-height: 1.12; text-wrap: balance;
+    background: linear-gradient(180deg, #f6e7b8 0%, var(--gold) 55%, var(--gold-deep) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .rule { width: 180px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .lede { font-style: italic; color: var(--ink); max-width: 34rem; margin: 0; text-wrap: balance; }
+  .stage { display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: 40px; align-items: start; justify-content: center; }
+  .screen {
+    position: relative; border-radius: 14px; overflow: hidden; background: #000;
+    box-shadow: 0 0 0 1px rgba(217, 184, 113, 0.35), 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(217, 184, 113, 0.08);
+    aspect-ratio: 9 / 16; max-width: 100%;
+  }
+  video { display: block; width: 100%; height: 100%; object-fit: cover; background: #000; }
+  .notes { display: grid; gap: 26px; min-width: 0; padding-top: 6px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; font-family: var(--display); font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .meta b { color: var(--gold); font-weight: 500; }
+  ol.acts { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+  ol.acts li { display: grid; grid-template-columns: 4.2rem minmax(0, 1fr); gap: 14px; align-items: baseline; }
+  .tc { font-family: var(--display); font-size: 0.78rem; letter-spacing: 0.12em; color: var(--gold); font-variant-numeric: tabular-nums; }
+  .act-title { font-family: var(--display); font-size: 0.95rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); }
+  .act-body { color: var(--muted); margin: 2px 0 0; }
+  .fine { font-size: 0.95rem; color: var(--muted); border-top: 1px solid rgba(217, 184, 113, 0.18); padding-top: 18px; margin: 0; }
+  @media (max-width: 760px) {
+    .stage { grid-template-columns: minmax(0, 1fr); }
+    .screen { max-width: 420px; width: 100%; margin-inline: auto; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">A spec brand film</div>
+    <h1>Great Atlantic</h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="lede">From the cold waters off Portland, Maine to the world's rarest caviar and seafood.</p>
+  </header>
+
+  <section class="stage">
+    <div class="screen">
+      <video id="film" src="great-atlantic-commercial.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+    </div>
+    <div class="notes">
+      <div class="meta"><span><b>1:40</b> runtime</span><span><b>9:16</b> vertical</span><span><b>1080</b> × 1920</span></div>
+      <ol class="acts">
+        <li><span class="tc">0:00</span><div><div class="act-title">The story</div><p class="act-body">Dana and Denise Leavitt dive for scallops and sea urchin off Portland, sell on the docks, export across Japan, and build Great Atlantic Trading. Told with the founders' own photographs.</p></div></li>
+        <li><span class="tc">0:32</span><div><div class="act-title">Beyond caviar</div><p class="act-body">Bottarga, Skrei cod roe, mojama, bluefin tuna heart, cold-smoked salmon, snail caviar, Maine lobster, escargot, cuttlefish ink, and a carousel of roe.</p></div></li>
+        <li><span class="tc">1:10</span><div><div class="act-title">The caviar</div><p class="act-body">The Caviar Star tin opens. Prunier French Osetra, rare albino sterlet, and every batch personally inspected.</p></div></li>
+      </ol>
+      <p class="fine">Spec concept prepared for Great Atlantic Trading Inc. and Caviar Star. Not an official advertisement. Story and product details from caviarstar.com; product scenes rendered in 3D from the company's own product photography.</p>
+    </div>
+  </section>
+</div>
+
+</body></html>

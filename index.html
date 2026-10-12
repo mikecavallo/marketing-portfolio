@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mike Cavallo · Marketing Portfolio</title>
+<meta name="description" content="Mike Cavallo: content, social, email and ecommerce marketing. Campaigns, video, design, and the tools behind them.">
+<meta property="og:title" content="Mike Cavallo · Marketing & Content">
+<meta property="og:description" content="I turn a one-line brief into a full campaign.">
+<meta property="og:image" content="caviar/thumbs/gallery.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F6F2EB; --paper-2:#EDE6DA; --ink:#171512; --muted:#6A635A; --line:#D9D0C2;
+  --green:#1F3B36; --brass:#A8834A; --brass-2:#C9A66B;
+  --night:#0E0F0F; --night-2:#18191A; --night-line:#2B2C2D; --night-ink:#EFE9DF; --night-muted:#A49C90;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --gutter:clamp(16px,4vw,56px); --max:1200px; --r:14px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font:600 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1.08}
+h2{font-size:clamp(34px,5vw,60px)}
+h3{font-size:clamp(22px,2.4vw,28px)}
+p{max-width:62ch}
+.lede{font-size:clamp(18px,1.6vw,21px);color:var(--muted)}
+section{padding:clamp(72px,10vw,140px) 0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font:600 15px/1 var(--sans);text-decoration:none;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--ink);color:var(--paper)}
+.btn-line{border:1px solid currentColor}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.scrolled{border-color:var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:500 20px/1 var(--serif);text-decoration:none}
+.logo span{color:var(--brass)}
+nav ul{display:flex;gap:28px;list-style:none;padding:0}
+nav ul a{font-size:14px;font-weight:500;text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+@media(max-width:760px){nav ul{display:none}}
+
+/* hero */
+.hero{padding:clamp(48px,8vw,110px) 0 clamp(56px,8vw,96px)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(44px,7.4vw,96px);margin:18px 0 26px}
+.hero h1 em{font-style:italic;color:var(--green)}
+.hero .lede{margin-bottom:34px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px -30px rgba(23,21,18,.45)}
+.hero-art img{width:100%;height:100%;object-fit:cover}
+.hero-art figcaption{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(14,15,15,.72);color:var(--night-ink);padding:10px 14px;border-radius:10px;font-size:13px;backdrop-filter:blur(6px)}
+.hero-art figcaption b{color:var(--brass-2);font-weight:600}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-art{aspect-ratio:4/3}}
+
+.proof{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proof div{padding:26px 20px 24px 0}
+.proof div+div{padding-left:20px;border-left:1px solid var(--line)}
+.proof b{display:block;font:400 clamp(30px,3.6vw,44px)/1 var(--serif);margin-bottom:8px}
+.proof span{font-size:14px;color:var(--muted)}
+@media(max-width:760px){.proof{grid-template-columns:1fr 1fr}.proof div:nth-child(3){padding-left:0;border-left:0}.proof div:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* campaign (dark) */
+.campaign{background:var(--night);color:var(--night-ink)}
+.campaign .lede,.campaign .muted{color:var(--night-muted)}
+.campaign .eyebrow{color:var(--brass-2)}
+.camp-head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:end;margin-bottom:56px}
+.camp-head h2 em{font-style:italic;color:var(--brass-2)}
+.brief{border:1px solid var(--night-line);border-radius:var(--r);padding:26px 28px;background:var(--night-2)}
+.brief q{display:block;font:italic 300 clamp(22px,2.4vw,28px)/1.3 var(--serif);margin:12px 0 14px;quotes:"\201C" "\201D"}
+.brief small{color:var(--night-muted);font-size:13px}
+@media(max-width:860px){.camp-head{grid-template-columns:1fr}}
+.tag{display:inline-block;font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;border-radius:999px;border:1px solid var(--night-line);color:var(--night-muted)}
+
+.idea{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,64px);align-items:center;padding:clamp(40px,6vw,72px) 0;border-top:1px solid var(--night-line)}
+.idea h3{font-size:clamp(40px,6vw,76px);font-style:italic;font-weight:300;color:var(--brass-2);margin:14px 0 18px}
+.idea img{border-radius:var(--r);aspect-ratio:16/10;object-fit:cover;width:100%}
+@media(max-width:860px){.idea{grid-template-columns:1fr}}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.pillar{border:1px solid var(--night-line);border-radius:var(--r);padding:24px;background:var(--night-2)}
+.pillar .num{font:400 14px/1 var(--serif);color:var(--brass-2)}
+.pillar h4{font:500 19px/1.3 var(--serif);margin:12px 0 8px}
+.pillar p{font-size:15px;color:var(--night-muted)}
+@media(max-width:860px){.pillars{grid-template-columns:1fr}}
+
+.block{padding:clamp(56px,7vw,96px) 0 0}
+.block-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.block-head h3{font-size:clamp(28px,3.4vw,40px)}
+.block-head p{color:var(--night-muted);font-size:15px;max-width:44ch}
+
+/* phone + grid */
+.social{display:grid;grid-template-columns:340px 1fr;gap:clamp(28px,4vw,56px);align-items:start}
+@media(max-width:960px){.social{grid-template-columns:1fr}}
+.phone{width:100%;max-width:340px;margin:0 auto;border-radius:44px;padding:12px;background:#000;border:1px solid #333;box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
+.phone-screen{border-radius:34px;overflow:hidden;background:#fff;color:#111}
+.ig-top{display:flex;align-items:center;gap:10px;padding:16px 14px 10px}
+.ig-ava{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#3a3a3a,#000);border:2px solid #fff;outline:2px solid var(--brass);display:grid;place-items:center;color:var(--brass-2);font:italic 500 18px/1 var(--serif)}
+.ig-name{font:600 14px/1.2 var(--sans)}
+.ig-bio{font-size:12px;color:#555;line-height:1.35}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.ig-grid button{all:unset;cursor:pointer;aspect-ratio:4/5;overflow:hidden;position:relative}
+.ig-grid img{width:100%;height:100%;object-fit:cover;transition:opacity .2s}
+.ig-grid button:hover img,.ig-grid button[aria-pressed="true"] img{opacity:.7}
+.ig-grid button[aria-pressed="true"]::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 3px var(--brass)}
+.post-detail{border:1px solid var(--night-line);border-radius:var(--r);background:var(--night-2);overflow:hidden;display:grid;grid-template-columns:.9fr 1.1fr}
+.post-detail img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.post-copy{padding:26px;display:flex;flex-direction:column;gap:14px}
+.post-copy .fmt{font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--brass-2)}
+.post-copy h4{font:400 24px/1.2 var(--serif)}
+.post-copy .cap{white-space:pre-line;font-size:15px;color:var(--night-ink)}
+.post-copy .why{font-size:14px;color:var(--night-muted);border-top:1px solid var(--night-line);padding-top:14px}
+@media(max-width:620px){.post-detail{grid-template-columns:1fr}.post-detail img{aspect-ratio:4/3}}
+.hint{font-size:13px;color:var(--night-muted);margin-top:12px}
+
+/* reels */
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:960px){.reels{grid-template-columns:1fr}}
+.reel{border:1px solid var(--night-line);border-radius:var(--r);background:var(--night-2);overflow:hidden;display:flex;flex-direction:column}
+.reel-media{aspect-ratio:9/12;position:relative;overflow:hidden;background:#000}
+.reel-media img,.reel-media video{width:100%;height:100%;object-fit:cover}
+.reel-media .hook{position:absolute;left:16px;right:16px;top:18px;background:#fff;color:#111;font:700 15px/1.25 var(--sans);padding:8px 10px;border-radius:6px;width:fit-content;max-width:85%}
+.reel-media .plat{position:absolute;right:12px;bottom:12px}
+.reel-body{padding:22px}
+.reel-body h4{font:400 22px/1.2 var(--serif);margin-bottom:8px}
+.reel-body p{font-size:14px;color:var(--night-muted)}
+.shots{list-style:none;padding:0;margin-top:14px;counter-reset:s;font-size:14px}
+.shots li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:8px;padding:8px 0;border-top:1px solid var(--night-line)}
+.shots li::before{content:attr(data-t);color:var(--brass-2);font-variant-numeric:tabular-nums}
+
+/* email */
+.email-wrap{display:grid;grid-template-columns:1fr 360px;gap:clamp(28px,4vw,56px);align-items:start}
+@media(max-width:960px){.email-wrap{grid-template-columns:1fr}}
+.client{border-radius:var(--r);overflow:hidden;border:1px solid var(--night-line);background:#E9E6E1}
+.client-bar{display:flex;gap:6px;align-items:center;padding:12px 14px;background:#d9d5ce}
+.client-bar i{width:11px;height:11px;border-radius:50%;background:#bdb7ae;display:block}
+.client-meta{background:#fff;color:#222;padding:16px 22px;font-size:14px;border-bottom:1px solid #e6e1d9}
+.client-meta b{font-weight:600}
+.client-meta .sub{font:600 17px/1.3 var(--sans);margin:4px 0 2px}
+.client-meta .pre{color:#777}
+.email{max-width:600px;margin:22px auto;background:#FBF8F3;color:#1b1a18;font-family:var(--sans)}
+.em-brand{text-align:center;padding:22px 0;font:italic 500 22px/1 var(--serif);letter-spacing:.02em;border-bottom:1px solid #e8e0d2}
+.em-hero{position:relative}
+.em-hero img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.em-body{padding:34px 40px;text-align:center}
+.em-body .kick{font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+.em-body h4{font:400 36px/1.1 var(--serif);margin:14px 0 14px}
+.em-body p{font-size:15px;color:#4a463f;margin:0 auto 22px}
+.em-btn{display:inline-block;background:#111;color:#fff;padding:15px 30px;font:600 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+.em-three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:0 40px 30px}
+.em-three img{aspect-ratio:1;object-fit:cover;width:100%}
+.em-three b{display:block;font:500 15px/1.25 var(--serif);margin:10px 0 4px}
+.em-three span{font-size:12px;color:#6b665d;line-height:1.4;display:block}
+.em-math{margin:0 40px 34px;border:1px solid #e3d9c6;padding:22px;text-align:center}
+.em-math b{font:400 26px/1.1 var(--serif);display:block;margin-bottom:6px}
+.em-math span{font-size:13px;color:#6b665d}
+.em-foot{background:#111;color:#bbb;text-align:center;font-size:11px;padding:22px}
+@media(max-width:560px){.em-body,.em-three{padding-left:20px;padding-right:20px}.em-math{margin:0 20px 26px}.em-three{grid-template-columns:1fr}}
+.notes{display:flex;flex-direction:column;gap:14px}
+.note{border:1px solid var(--night-line);border-radius:var(--r);padding:20px;background:var(--night-2)}
+.note h5{font:600 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--brass-2);margin-bottom:10px}
+.note p,.note li{font-size:14px;color:var(--night-muted)}
+.note ul{padding-left:18px}
+.note .alt{color:var(--night-ink);font-size:15px;margin:4px 0}
+
+/* print piece */
+.print{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center}
+@media(max-width:860px){.print{grid-template-columns:1fr}}
+.card{aspect-ratio:5/7;background:#F8F4EC;color:#1b1a18;border-radius:6px;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);padding:9% 10%;display:flex;flex-direction:column;text-align:center;max-width:460px;margin:0 auto;width:100%;transform:rotate(-1.5deg)}
+.card .kick{font:600 10px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--brass)}
+.card h4{font:italic 300 clamp(34px,4.4vw,48px)/1 var(--serif);margin:14px 0 6px}
+.card .date{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6b665d}
+.card hr{border:0;border-top:1px solid #d8ccb6;margin:22px auto;width:60px}
+.card dl{display:grid;gap:14px;flex:1}
+.card dt{font:500 17px/1.2 var(--serif)}
+.card dd{font-size:12px;color:#6b665d;margin-top:3px}
+.card .fine{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8b8478}
+
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.cal .dow{font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--night-muted);padding-bottom:4px}
+.day{border:1px solid var(--night-line);border-radius:10px;padding:10px;min-height:118px;background:var(--night-2);display:flex;flex-direction:column;gap:6px}
+.day .d{font:400 15px/1 var(--serif);color:var(--night-muted)}
+.day .m{display:none}
+.chip{font-size:11.5px;line-height:1.3;padding:5px 7px;border-radius:6px;background:#232425;border-left:3px solid var(--c,#666)}
+.c-ig{--c:#C9A66B}.c-tt{--c:#7FB8B0}.c-em{--c:#D98C6A}.c-pin{--c:#C46B7A}.c-fb{--c:#7E95C9}.c-evt{--c:#E8E0D2}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;font-size:13px;color:var(--night-muted)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--c);margin-right:6px;vertical-align:-1px}
+@media(max-width:860px){
+  .cal{grid-template-columns:1fr}
+  .cal .dow{display:none}
+  .day{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center}
+  .day .d{width:100%}
+  .day .m{display:inline}
+  .day:empty{display:none}
+}
+
+.measure{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.measure div{border-top:2px solid var(--brass);padding-top:16px}
+.measure b{font:400 22px/1.2 var(--serif);display:block;margin-bottom:6px}
+.measure p{font-size:14px;color:var(--night-muted)}
+@media(max-width:860px){.measure{grid-template-columns:1fr 1fr}}
+.disclaimer{margin-top:56px;padding-top:24px;border-top:1px solid var(--night-line);font-size:13px;color:var(--night-muted);max-width:none}
+
+/* case study */
+.case-head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:end;margin-bottom:48px}
+@media(max-width:860px){.case-head{grid-template-columns:1fr}}
+.role{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.role span{font-size:13px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.frames{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.frames img{border-radius:10px;border:1px solid var(--line);aspect-ratio:16/9;object-fit:cover;width:100%}
+.frames figure:first-child{grid-column:span 2;grid-row:span 2}
+.frames figure:first-child img{height:100%}
+@media(max-width:760px){.frames{grid-template-columns:1fr 1fr}.frames figure:first-child{grid-column:span 2;grid-row:auto}}
+.case-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+.case-cols h4{font:500 19px/1.3 var(--serif);margin-bottom:8px}
+.case-cols p{font-size:15px;color:var(--muted)}
+@media(max-width:860px){.case-cols{grid-template-columns:1fr}}
+
+.dash{margin-top:clamp(56px,7vw,96px);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,64px);align-items:center}
+@media(max-width:860px){.dash{grid-template-columns:1fr}}
+.ui{border-radius:var(--r);border:1px solid var(--line);background:#fff;box-shadow:0 30px 60px -36px rgba(23,21,18,.5);overflow:hidden;font-size:12px}
+.ui-top{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #eee;background:#FAFAF7}
+.ui-top b{font:600 13px/1 var(--sans);color:#2f5d27}
+.ui-tabs{display:flex;gap:12px;color:#888}
+.ui-tabs span:first-child{color:#2f5d27;font-weight:600}
+.ui-body{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px}
+.kpi{border:1px solid #eee;border-radius:10px;padding:12px}
+.kpi small{color:#888;display:block}
+.kpi strong{font:600 18px/1.4 var(--sans);color:#222}
+.ui-cal{grid-column:span 4;display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.ui-cal div{border:1px solid #eee;border-radius:8px;min-height:54px;padding:6px;display:flex;flex-direction:column;gap:4px}
+.ui-cal i{display:block;height:7px;border-radius:4px;background:var(--c)}
+.film{grid-column:1/-1;margin:0}
+.film video{display:block;width:100%;aspect-ratio:16/9;border-radius:var(--r);background:#050807;box-shadow:0 40px 80px -36px rgba(23,21,18,.55)}
+.film figcaption{font-size:13px;color:var(--muted);margin-top:12px}
+.film-meta{display:grid;gap:18px;align-content:center;border-left:1px solid var(--line);padding-left:clamp(20px,3vw,40px)}
+.film-meta b{display:block;font:400 22px/1.2 var(--serif)}
+.film-meta span{font-size:14px;color:var(--muted)}
+@media(max-width:860px){.film-meta{border-left:0;padding-left:0;grid-template-columns:1fr 1fr}}
+.ui-cap{font-size:12px;color:var(--muted);margin-top:10px}
+.feat{list-style:none;padding:0;display:grid;gap:12px;margin-top:20px}
+.feat li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:15px}
+.feat li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);margin-top:9px}
+
+/* more work */
+.more{background:var(--paper-2)}
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px}
+@media(max-width:760px){.work-grid{grid-template-columns:1fr}}
+.work{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.work img{aspect-ratio:16/10;object-fit:cover;width:100%;border-bottom:1px solid var(--line)}
+.work .ph{aspect-ratio:16/10;display:grid;place-items:center;border-bottom:1px solid var(--line);background:linear-gradient(135deg,var(--green),#2d5650);color:var(--paper);font:italic 300 clamp(26px,3vw,36px)/1.1 var(--serif);text-align:center;padding:24px}
+.work-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.work-body .k{font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
+.work-body h4{font:400 24px/1.2 var(--serif)}
+.work-body p{font-size:15px;color:var(--muted)}
+.work-body a{font-size:14px;font-weight:600;margin-top:auto;padding-top:8px;text-decoration:none;color:var(--green)}
+.work-body a:hover{text-decoration:underline}
+
+.live{position:relative;aspect-ratio:16/10;border-bottom:1px solid var(--line);background:#E7ECEE;max-width:100%}
+.live img{width:100%;height:100%;object-fit:cover;border:0}
+.live iframe{width:100%;height:100%;border:0;display:block}
+.live-btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:0;cursor:pointer;background:var(--ink);color:var(--paper);font:600 15px/1 var(--sans);padding:15px 22px;border-radius:999px;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);transition:transform .2s}
+.live-btn:hover{transform:translate(-50%,-50%) scale(1.04)}
+.live-btn:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.viewer{position:fixed;inset:0;z-index:200;background:var(--night);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.viewer-bar{display:flex;align-items:center;gap:16px;padding:10px 16px;color:var(--night-ink);font-size:14px;border-bottom:1px solid var(--night-line)}
+.viewer-bar span:first-child{font:500 16px/1.2 var(--serif);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.viewer-hint{color:var(--night-muted);font-size:13px}
+@media(max-width:560px){.viewer-hint{display:none}}
+#viewer-close{border:1px solid var(--night-line);background:var(--night-2);color:var(--night-ink);font:600 14px/1 var(--sans);padding:10px 16px;border-radius:999px;cursor:pointer}
+#viewer-close:focus-visible{outline:3px solid var(--brass-2);outline-offset:2px}
+#viewer-frame{flex:1;width:100%;border:0;background:#fff}
+[hidden]{display:none!important}
+/* toolkit + about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px)}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-grid p+p{margin-top:16px}
+.tools{display:grid;gap:22px}
+.tools h4{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.tools div div{display:flex;flex-wrap:wrap;gap:8px}
+.tools span{font-size:14px;padding:8px 13px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+
+.contact{background:var(--green);color:var(--paper);text-align:center}
+.contact h2{font-size:clamp(40px,6.4vw,84px);margin:16px auto 22px;max-width:16ch}
+.contact h2 em{font-style:italic;color:var(--brass-2)}
+.contact p{margin:0 auto 34px;color:#cfd8d4}
+.contact .eyebrow{color:var(--brass-2)}
+.contact .btn-dark{background:var(--paper);color:var(--ink)}
+.contact .hero-ctas{justify-content:center}
+footer{background:var(--green);color:#9fb1ab;font-size:13px;text-align:center;padding:0 0 36px}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:end;margin-bottom:48px}
+@media(max-width:860px){.sec-head{grid-template-columns:1fr}}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.stat-grid div{padding:24px 22px 24px 0;border-bottom:1px solid var(--line)}
+.stat-grid div:not(:nth-child(3n+1)){padding-left:22px;border-left:1px solid var(--line)}
+.stat-grid b{display:block;font:400 clamp(30px,3.6vw,44px)/1 var(--serif);margin-bottom:8px;font-variant-numeric:tabular-nums}
+.stat-grid span{font-size:14px;color:var(--muted)}
+@media(max-width:760px){.stat-grid{grid-template-columns:1fr 1fr}.stat-grid div{padding-left:0!important;border-left:0!important}.stat-grid div:nth-child(2n){padding-left:18px!important;border-left:1px solid var(--line)!important}}
+.past{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}
+@media(max-width:760px){.past{grid-template-columns:1fr}}
+.past .work{background:#fff}
+.hero-loop{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:#07080c;box-shadow:0 30px 60px -30px rgba(23,21,18,.45);max-width:100%}
+.hero-loop video{width:100%;height:100%;object-fit:cover;display:block}
+.hero-loop figcaption{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(14,15,15,.72);color:var(--night-ink);padding:10px 14px;border-radius:10px;font-size:13px;backdrop-filter:blur(6px)}
+.hero-loop figcaption b{color:var(--brass-2);font-weight:600}
+@media(max-width:860px){.hero-loop{aspect-ratio:4/3}}
+.jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.jump a{font-size:14px;font-weight:500;text-decoration:none;padding:9px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:var(--paper)}
+.jump a:hover{border-color:var(--ink)}
+.jump b{font:400 13px/1 var(--serif);color:var(--brass);margin-right:6px}
+
+/* Caviar Star showcase */
+.cs{background:#07080c;color:#efe8da}
+.cs .eyebrow{color:#d9b871}
+.cs .lede,.cs .muted{color:#a69c8a}
+.cs h2,.cs h3{color:#efe8da}
+.cs h2 em{font-style:italic;color:#d9b871}
+.honest{border:1px solid rgba(217,184,113,.22);border-radius:var(--r);padding:20px 22px;background:#0e1016;font-size:15px;color:#cfc6b6}
+.honest b{color:#d9b871;font-weight:600}
+.cs-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:40px}
+.cs-card{grid-column:span 2;display:grid;grid-template-rows:auto 1fr;background:#0e1016;border:1px solid rgba(217,184,113,.18);color:inherit;text-decoration:none;min-width:0;transition:border-color .3s;cursor:pointer;text-align:left;font:inherit;padding:0}
+.cs-card.big{grid-column:span 3}
+.cs-card:hover,.cs-card:focus-visible{border-color:#d9b871}
+.cs-card:focus-visible{outline:2px solid #d9b871;outline-offset:3px}
+.cs-card .img{aspect-ratio:16/10;overflow:hidden;background:#000;max-width:100%}
+.cs-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.cs-card:hover img{transform:scale(1.03)}
+.cs-card .body{padding:18px 20px 22px;display:grid;gap:8px;align-content:start}
+.cs-card .num{font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#d9b871}
+.cs-card h3{margin:0;font:400 23px/1.2 var(--serif);color:#efe8da}
+.cs-card p{margin:0;color:#a69c8a;font-size:15px}
+.cs-card .go{margin-top:6px;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#d9b871}
+@media(max-width:980px){.cs-card,.cs-card.big{grid-column:span 3}}
+@media(max-width:640px){.cs-grid{grid-template-columns:1fr}.cs-card,.cs-card.big{grid-column:auto}}
+.cs-film{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:center;margin-top:clamp(56px,7vw,96px)}
+@media(max-width:860px){.cs-film{grid-template-columns:1fr}}
+.cs-film video{width:100%;aspect-ratio:9/16;border-radius:14px;background:#000;display:block;box-shadow:0 0 0 1px rgba(217,184,113,.35),0 30px 80px rgba(0,0,0,.6);max-width:100%}
+.loops{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-top:clamp(40px,5vw,64px)}
+.loops figure{margin:0;display:grid;gap:6px;min-width:0}
+.loops video{width:100%;aspect-ratio:1;object-fit:cover;background:#0a0b0f;border:1px solid rgba(217,184,113,.1);display:block;max-width:100%}
+.loops figcaption{font-size:12px;color:#a69c8a;line-height:1.3}
+@media(max-width:860px){.loops{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.ads-row{display:flex;gap:12px;align-items:flex-end;margin-top:22px}
+.ads-row figure{margin:0;display:grid;gap:6px;min-width:0}
+.ads-row video{width:100%;display:block;background:#000;border:1px solid rgba(217,184,113,.12)}
+.ads-row figcaption{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#a69c8a}
+@media(max-width:560px){.ads-row{flex-wrap:wrap}.ads-row figure{flex:1 1 40%!important}}
+
+/* toolkit */
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.process div{border-top:2px solid var(--green);padding-top:16px}
+.process b{display:block;font:400 22px/1.2 var(--serif);margin-bottom:6px}
+.process p{font-size:15px;color:var(--muted)}
+@media(max-width:860px){.process{grid-template-columns:1fr 1fr}}
+.email-line{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
+.email-line code{font:500 clamp(18px,2.4vw,24px)/1 var(--sans);color:var(--paper);user-select:all;background:rgba(255,255,255,.08);padding:14px 18px;border-radius:999px}
+</style>
+<script>
+// Until an image file exists, show a labeled placeholder in its slot.
+document.addEventListener('error', e => {
+  const img = e.target;
+  if (img.tagName !== 'IMG' || img.dataset.ph) return;
+  img.dataset.ph = 1;
+  const name = (img.getAttribute('src') || '').split('/').pop();
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='800' height='1000'><rect width='100%' height='100%' fill='#2a2622'/><text x='50%' y='50%' fill='#C9A66B' font-family='Georgia' font-size='44' text-anchor='middle'>${name}</text></svg>`;
+  img.src = 'data:image/svg+xml,' + encodeURIComponent(svg);
+}, true);
+</script>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Mike Cavallo<span>.</span></a>
+    <ul>
+      <li><a href="#past">How I've marketed</a></li>
+      <li><a href="#now">How I market now</a></li>
+      <li><a href="#for-you">How I can market for you</a></li>
+      <li><a href="#tools">What I use</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Marketing portfolio</div>
+        <h1>I've sold it, I've marketed it, and I've <em>already started on yours.</em></h1>
+        <p class="lede">More than $1.5 million in online sales from my own ecommerce business. Social, content and video for a growing local brand. And a full set of campaign work for Caviar Star, built before anyone asked.</p>
+        <div class="jump">
+          <a href="#past"><b>01</b>How I've marketed</a>
+          <a href="#now"><b>02</b>How I market now</a>
+          <a href="#for-you"><b>03</b>How I can market for you</a>
+          <a href="#tools"><b>04</b>What I use</a>
+        </div>
+      </div>
+      <figure class="hero-loop">
+        <video src="caviar/turntables/turntable/dynasty-royal-osetra-caviar.mp4" poster="caviar/turntables/posters/dynasty-royal-osetra-caviar.webp" muted loop playsinline autoplay preload="metadata" aria-label="Dynasty Royal Osetra tin turning in 3D"></video>
+        <figcaption><b>Dynasty Royal Osetra</b> · one of 181 Caviar Star products I rebuilt in 3D</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="proof">
+    <div><b>$1.5M+</b><span>in ecommerce sales, $750K in a single year</span></div>
+    <div><b>10</b><span>online marketplaces run from one warehouse</span></div>
+    <div><b>80+</b><span>agent websites for a real estate brokerage</span></div>
+    <div><b>181</b><span>Caviar Star products rebuilt in 3D</span></div>
+  </div>
+</div>
+
+<!-- ===================== HOW I'VE MARKETED ===================== -->
+<section id="past">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">01 · How I've marketed</div>
+        <h2 style="margin-top:18px">Results I've been accountable for</h2>
+      </div>
+      <p class="lede">I've run the store, the listings and the content myself, so I know what makes someone actually click "buy." These are the numbers I was measured on.</p>
+    </div>
+
+    <div class="stat-grid">
+      <div><b>$1.5M+</b><span>Sales from my own ecommerce company, $750K of it in 2023</span></div>
+      <div><b>10,000+ lb</b><span>Product shipped every week from a 2,500 sq ft warehouse</span></div>
+      <div><b>10</b><span>Marketplaces with listings, photos and pricing I managed</span></div>
+      <div><b>+65%</b><span>Engagement across 6 social platforms for a real estate brokerage</span></div>
+      <div><b>10,000+</b><span>Monthly visitors to the Candlewood Lake Life blog I write</span></div>
+      <div><b>75%</b><span>Of priority keywords on page one of Google</span></div>
+    </div>
+
+    <div class="past">
+      <article class="work">
+        <div class="live">
+          <img src="img/work/listing-story.jpg" alt="Scrolling listing page for 106 Steinmann Avenue">
+          <button type="button" class="live-btn" data-open="work/steinmann-story/index.html" data-title="106 Steinmann Avenue · Photo story">▶ Open the experience</button>
+        </div>
+        <div class="work-body">
+          <div class="k">Real estate · Listing marketing</div>
+          <h4>A listing that reads like a story</h4>
+          <p>A scroll-driven page for a brokerage listing. It walks buyers through the house room by room, with sound, and keeps the booking button in reach.</p>
+          <a href="work/steinmann-story/index.html" data-open="work/steinmann-story/index.html" data-title="106 Steinmann Avenue · Photo story">Open the full experience →</a>
+        </div>
+      </article>
+      <article class="work">
+        <div class="live">
+          <img src="img/work/listing-build.jpg" alt="3D build-up animation of the house from its foundation">
+          <button type="button" class="live-btn" data-open="work/steinmann-build/index.html" data-title="106 Steinmann Avenue · Build and reveal">▶ Watch it build</button>
+        </div>
+        <div class="work-body">
+          <div class="k">Real estate · Motion</div>
+          <h4>The house builds itself as you scroll</h4>
+          <p>The same listing rises from the foundation up, then the real photo wipes in over the finished drawing. The kind of page people send to each other.</p>
+          <a href="work/steinmann-build/index.html" data-open="work/steinmann-build/index.html" data-title="106 Steinmann Avenue · Build and reveal">Open the full experience →</a>
+        </div>
+      </article>
+    </div>
+    <p class="muted" style="margin-top:22px;font-size:14px;color:var(--muted)">For the brokerage I also managed 80+ agent websites, wrote the blog, ran six social platforms and designed print and digital ad campaigns.</p>
+  </div>
+</section>
+
+<section id="now">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <div class="eyebrow">02 · How I market now</div>
+        <h2 style="margin-top:18px">Calling All Dogs</h2>
+        <div class="role"><span>Instagram</span><span>Facebook</span><span>Video</span><span>Email</span><span>Website</span><span>Analytics</span></div>
+      </div>
+      <div>
+        <p class="lede">I run marketing for Calling All Dogs, a dog training business in Rochester, New York, led by certified behavior consultant Tori Ganino. I handle the social calendar, the content and the systems behind it.</p>
+        <div class="hero-ctas" style="margin-top:22px">
+          <a class="btn btn-dark" href="https://www.instagram.com/callingalldogsny/" target="_blank" rel="noopener">Instagram I run →</a>
+          <a class="btn btn-line" href="https://www.facebook.com/callingalldogsny/" target="_blank" rel="noopener">Facebook page I run →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="frames reveal">
+      <figure><img src="img/cad/ch00s01_end.jpg" alt="Title slide: Understanding Dog Behavior with Tori Ganino"></figure>
+      <figure><img src="img/cad/ch01s01_b3.jpg" alt="Animated slide comparing aggression and reactivity"></figure>
+      <figure><img src="img/cad/ch01s06_b4.jpg" alt="Slide on breed history and purpose with a beagle photo"></figure>
+      <figure><img src="img/cad/ch01s01_end.jpg" alt="Slide: the label is the starting point, not the whole story"></figure>
+      <figure><img src="img/cad/ch01s10_end.jpg" alt="Slide: be kind to yourself"></figure>
+      <figure><img src="img/cad/ch01s12_end.jpg" alt="Calling All Dogs end card"></figure>
+    </div>
+
+    <div class="case-cols">
+      <div><h4>From slide deck to video course</h4><p>Tori had a static slide deck. I turned it into a narrated, animated video series in her brand colors, with every animation timed to her recorded voice, so it can be sold as an online course.</p></div>
+      <div><h4>A visual system that scales</h4><p>The same icons, photo treatments and layouts run through every chapter. New lessons can drop in without a redesign, and the cut-downs work as social clips.</p></div>
+      <div><h4>Built around feedback</h4><p>Each chapter went through rounds of notes with the client, from renaming the course to cutting a slide that didn't land. I kept the script doc as the single source of truth.</p></div>
+    </div>
+
+    <div class="dash">
+      <div>
+        <div class="eyebrow">The tool behind it</div>
+        <h3 style="font-size:clamp(28px,3.4vw,40px);margin:14px 0 16px">A marketing dashboard I built for the business</h3>
+        <p class="lede" style="font-size:17px">Instead of juggling six logins, everything we need to plan, post and measure lives in one place.</p>
+        <ul class="feat">
+          <li>A content calendar with drafts, approvals and scheduled posting to Facebook, Instagram and Pinterest</li>
+          <li>Google Analytics and Search Console reporting, pulled in live</li>
+          <li>Best times to post, based on our own audience data</li>
+          <li>Competitor ad research and Google Business Profile tracking</li>
+          <li>An AI assistant that drafts captions in the brand voice for review</li>
+          <li>A weekly to-do list that explains each fix and applies SEO changes to WordPress in one click</li>
+        </ul>
+      </div>
+      <div class="film-meta">
+        <div><b>1:39</b><span>runtime</span></div>
+        <div><b>Know · Plan · Create · Grow</b><span>the four parts of the product</span></div>
+        <div><b>Directed by me</b><span>built with AI video tools</span></div>
+      </div>
+      <figure class="film">
+        <video controls playsinline preload="metadata" poster="media/dashboard-film.jpg" src="media/dashboard-film.mp4"></video>
+        <figcaption>The launch film I made for the dashboard, told through a real week at Calling All Dogs.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== HOW I CAN MARKET FOR YOU ===================== -->
+<section class="cs" id="for-you">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">03 · How I can market for you</div>
+        <h2 style="margin-top:18px">The Caviar Star <em>Showcase</em></h2>
+        <p class="lede" style="margin-top:18px">Every product in the shop rebuilt in 3D, your story told as a film, a guide to every caviar you sell, sale ads for social, and a tool to make the next ones yourself.</p>
+      </div>
+      <div class="honest"><b>How I made it.</b> I directed this work and built it with AI tools, starting from your website, your product photos, your catalog and your blog. I set the story and the look, checked every price and fact, and reviewed every scene. I didn't shoot any of it. That's the point: this is what I can do from your website alone. With the real product in your building, it gets better.</div>
+    </div>
+
+    <div class="cs-grid">
+      <button type="button" class="cs-card big" data-open="caviar/collection-3d/index.html" data-title="The collection in 3D">
+        <div class="img"><img src="caviar/thumbs/gallery.jpg" alt="The Caviar Star tin rendered in 3D, lid open" ></div>
+        <div class="body"><div class="num">181 products</div><h3>The collection in 3D</h3><p>Every caviar, oil, vinegar, truffle and spoon in the shop on a live stage you can turn by hand. Each caviar sits in its own jar under its own lid.</p><div class="go">Open the collection →</div></div>
+      </button>
+      <button type="button" class="cs-card big" data-open="caviar/documentary/index.html" data-title="From the Docks to the Tin">
+        <div class="img"><img src="caviar/thumbs/film.jpg" alt="Title card of the film From the Docks to the Tin" ></div>
+        <div class="body"><div class="num">15 minutes</div><h3>From the Docks to the Tin</h3><p>A short documentary about the family business: urchin diving in Portland, the fish markets of Japan, the move south and the caviar that leaves Ocean Isle Beach today.</p><div class="go">Watch the film →</div></div>
+      </button>
+      <button type="button" class="cs-card" data-open="caviar/atlas/index.html" data-title="The Caviar Atlas">
+        <div class="img"><img src="caviar/thumbs/atlas.jpg" alt="Chart of every caviar drawn to scale" ></div>
+        <div class="body"><div class="num">31 caviars</div><h3>The Caviar Atlas</h3><p>Where each roe comes from, every pearl drawn to scale in its real color, and a quiz that ends at the right tin.</p><div class="go">Explore the atlas →</div></div>
+      </button>
+      <a class="cs-card" href="https://claude.ai/artifact/BqZfW5BJNVk9rmV8LsQbQE" target="_blank" rel="noopener">
+        <div class="img"><img src="caviar/thumbs/turntables.jpg" alt="A balsamic box turning in the light" ></div>
+        <div class="body"><div class="num">181 loops</div><h3>Turntables</h3><p>A ten-second loop of every product turning in the light, ready for product pages, ads and Stories.</p><div class="go">See the turntables ↗</div></div>
+      </a>
+      <button type="button" class="cs-card" data-open="caviar/documentary/index.html#reels-h" data-title="Reels">
+        <div class="img"><img src="caviar/thumbs/reels.jpg" alt="Grid of caviar jars from the reel" ></div>
+        <div class="body"><div class="num">2 cuts</div><h3>Reels</h3><p>Fifty seconds of the collection in motion, cut vertical for Instagram, TikTok and Shorts, and landscape for the web.</p><div class="go">Watch the reels →</div></div>
+      </button>
+      <button type="button" class="cs-card big" data-open="caviar/sale-ads/index.html" data-title="Sale ads, ready to run">
+        <div class="img"><img src="caviar/thumbs/ads.jpg" alt="Three sale ads in 9:16, 4:5 and 1:1" ></div>
+        <div class="body"><div class="num">11 ads · 3 sizes</div><h3>Sale ads, ready to run</h3><p>Every caviar on sale plus serving pieces, as motion and stills for Stories, Feed and Square, with Meta and TikTok copy inside the character limits. Every price checked against the store.</p><div class="go">See the ads →</div></div>
+      </button>
+      <a class="cs-card big" href="https://claude.ai/artifact/3psJCsBJpVYWbD9GbQ2xJE" target="_blank" rel="noopener">
+        <div class="img"><img src="caviar/thumbs/studio.jpg" alt="The Ad Studio controls beside a live preview" ></div>
+        <div class="body"><div class="num">Self-serve</div><h3>The Ad Studio</h3><p>Pick any product and size, it pulls the live price, you write the headline, and it exports the video in all three sizes. The next sale takes minutes, not a designer.</p><div class="go">Open the studio ↗</div></div>
+      </a>
+    </div>
+
+    <div class="cs-film">
+      <video src="caviar/spec-film/great-atlantic-commercial.mp4" poster="caviar/spec-film/poster.jpg" controls playsinline preload="metadata" aria-label="Great Atlantic spec brand film"></video>
+      <div>
+        <div class="eyebrow">Spec brand film · 1:40 · vertical</div>
+        <h3 style="font-size:clamp(28px,3.4vw,40px);margin:14px 0 16px">Great Atlantic</h3>
+        <p class="lede" style="font-size:17px">From the cold waters off Portland, Maine to the world's rarest caviar. The founders' story told with their own photographs, then the range beyond caviar, then the tin opening.</p>
+        <p class="muted" style="margin-top:14px;font-size:15px">Cut 9:16 for Reels, TikTok and Stories, where most people will see it.</p>
+        <div class="ads-row" aria-label="One sale ad in three sizes">
+          <figure style="flex:28 1 0"><video src="caviar/sale-ads/vid/dynasty-royal-osetra-caviar-9x16.mp4" poster="caviar/sale-ads/img/dynasty-royal-osetra-caviar-9x16.jpg" muted loop playsinline autoplay preload="none" style="aspect-ratio:9/16"></video><figcaption>9:16 · Stories</figcaption></figure>
+          <figure style="flex:36 1 0"><video src="caviar/sale-ads/vid/dynasty-royal-osetra-caviar-4x5.mp4" poster="caviar/sale-ads/img/dynasty-royal-osetra-caviar-4x5.jpg" muted loop playsinline autoplay preload="none" style="aspect-ratio:4/5"></video><figcaption>4:5 · Feed</figcaption></figure>
+          <figure style="flex:36 1 0"><video src="caviar/sale-ads/vid/dynasty-royal-osetra-caviar-1x1.mp4" poster="caviar/sale-ads/img/dynasty-royal-osetra-caviar-1x1.jpg" muted loop playsinline autoplay preload="none" style="aspect-ratio:1"></video><figcaption>1:1 · Square</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="loops" aria-label="Product turntable loops">
+      <figure><video src="caviar/turntables/turntable/dynasty-royal-osetra-caviar.mp4" poster="caviar/turntables/posters/dynasty-royal-osetra-caviar.webp" muted loop playsinline autoplay preload="none" aria-label="Dynasty Royal Osetra turning"></video><figcaption>Dynasty Royal Osetra</figcaption></figure>
+      <figure><video src="caviar/turntables/turntable/amber-dynasty-royal-kaluga-caviar.mp4" poster="caviar/turntables/posters/amber-dynasty-royal-kaluga-caviar.webp" muted loop playsinline autoplay preload="none" aria-label="Premier Kaluga Hybrid turning"></video><figcaption>Premier Kaluga Hybrid</figcaption></figure>
+      <figure><video src="caviar/turntables/turntable/caviar-gift-box-3-x-1oz-variety.mp4" poster="caviar/turntables/posters/caviar-gift-box-3-x-1oz-variety.webp" muted loop playsinline autoplay preload="none" aria-label="Caviar gift box turning"></video><figcaption>Caviar gift box</figcaption></figure>
+      <figure><video src="caviar/turntables/turntable/horn-caviar-spoon-sturgeon-handle.mp4" poster="caviar/turntables/posters/horn-caviar-spoon-sturgeon-handle.webp" muted loop playsinline autoplay preload="none" aria-label="Horn spoon turning"></video><figcaption>Horn spoon</figcaption></figure>
+      <figure><video src="caviar/turntables/turntable/black-truffle-breakings.mp4" poster="caviar/turntables/posters/black-truffle-breakings.webp" muted loop playsinline autoplay preload="none" aria-label="Black truffle breakings turning"></video><figcaption>Black truffle breakings</figcaption></figure>
+      <figure><video src="caviar/turntables/turntable/50-year-aged-balsamic-vinegar.mp4" poster="caviar/turntables/posters/50-year-aged-balsamic-vinegar.webp" muted loop playsinline autoplay preload="none" aria-label="50-year balsamic turning"></video><figcaption>50-year balsamic</figcaption></figure>
+    </div>
+    <p class="muted" style="margin-top:14px;font-size:14px">Six of the 181 turntable loops. Each one is ten seconds and ready for a product page or an ad.</p>
+  </div>
+</section>
+
+<section class="campaign" id="campaign" style="border-top:1px solid #2B2C2D">
+  <div class="wrap">
+    <div class="camp-head">
+      <div>
+        <span class="tag">Campaign plan · Spec work</span>
+        <h2 style="margin-top:20px">The <em>Osetra</em> Hour</h2>
+        <p class="lede" style="margin-top:18px">A fall entertaining campaign built from one sentence, carried across Instagram, TikTok, Pinterest, email and an in-store event.</p>
+      </div>
+      <div class="brief">
+        <div class="eyebrow">The brief</div>
+        <q>We want to feature Osetra caviar for fall entertaining.</q>
+        <small>Straight from the Great Atlantic job post. Here's what I'd bring back for review.</small>
+      </div>
+    </div>
+
+    <div class="idea">
+      <div>
+        <div class="eyebrow">The big idea</div>
+        <h3>“The Osetra Hour”</h3>
+        <p class="lede">Fall hosting has a moment everyone loves: the half hour before dinner when guests arrive, coats come off and someone opens something good. We give that moment a name and put a tin of Osetra at the center of it.</p>
+        <p class="muted" style="margin-top:14px">It's a name people can say, a hashtag they can use and a ritual that repeats every weekend from October to New Year's. It also points straight at a product to sell: the Osetra Hour kit.</p>
+      </div>
+      <img src="img/gen/table.jpg" alt="Overhead view of an autumn dinner table with a caviar service at the center">
+    </div>
+
+    <div class="pillars">
+      <div class="pillar"><div class="num">01</div><h4>Make it approachable</h4><p>Caviar on kettle chips, crispy potatoes and deviled eggs. Show that Osetra belongs at a Friday get-together, not only at a gala.</p></div>
+      <div class="pillar"><div class="num">02</div><h4>The host's playbook</h4><p>Answer the questions hosts actually Google: how much per guest, what to serve it on, what to pour. Useful content gets saved and shared.</p></div>
+      <div class="pillar"><div class="num">03</div><h4>Gift the season</h4><p>Hand off from hosting to gifting in November, so the campaign carries straight into holiday sales instead of stopping.</p></div>
+    </div>
+
+    <!-- Social grid -->
+    <div class="block">
+      <div class="block-head">
+        <h3>Instagram: the first nine</h3>
+        <p>Tap a post to see the caption and why it's there. The grid is planned to read as one story at a glance.</p>
+      </div>
+      <div class="social">
+        <div class="phone" aria-label="Instagram profile mockup">
+          <div class="phone-screen">
+            <div class="ig-top">
+              <div class="ig-ava">C</div>
+              <div><div class="ig-name">caviar.concept</div><div class="ig-bio">Fall is for hosting. #TheOsetraHour</div></div>
+            </div>
+            <div class="ig-grid" id="grid"></div>
+          </div>
+        </div>
+        <div>
+          <article class="post-detail" id="post" aria-live="polite">
+            <img id="post-img" src="" alt="">
+            <div class="post-copy">
+              <div class="fmt" id="post-fmt"></div>
+              <h4 id="post-title"></h4>
+              <div class="cap" id="post-cap"></div>
+              <div class="why" id="post-why"></div>
+            </div>
+          </article>
+          <p class="hint">Each caption ends with one clear action: save, share, tag or shop. Hashtags stay short and branded.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reels -->
+    <div class="block">
+      <div class="block-head">
+        <h3>Short-form video: three Reels & TikToks</h3>
+        <p>Each one opens on a hook in the first second, gets shot in a single afternoon and gets cut down for Stories.</p>
+      </div>
+      <div class="reels">
+        <article class="reel">
+          <div class="reel-media"><img src="img/gen/chips.jpg" alt="Kettle chips topped with crème fraîche and caviar"><div class="hook">Ranking the least fancy things to put caviar on</div></div>
+          <div class="reel-body">
+            <h4>“Caviar on…, ranked”</h4>
+            <p>A trend format that sells with humor. High-low pairings make Osetra feel fun and get comments arguing about the ranking.</p>
+            <ul class="shots">
+              <li data-t="0:00">Hook text over a chip held up to camera</li>
+              <li data-t="0:02">Five fast tastes: kettle chip, tater tot, deviled egg, smashed potato, blini</li>
+              <li data-t="0:11">Final pick revealed with a spoon to camera</li>
+              <li data-t="0:14">End card: “Which one are you serving?”</li>
+            </ul>
+          </div>
+        </article>
+        <article class="reel">
+          <div class="reel-media"><img src="img/gen/spoon.jpg" alt="Macro of osetra caviar on a mother-of-pearl spoon"><div class="hook">POV: it's 6pm and your guests are early</div></div>
+          <div class="reel-body">
+            <h4>Setting the Osetra Hour</h4>
+            <p>Quiet ASMR: ice crunching, the tin opening, a cork popping. No voiceover, so it plays on mute and loops cleanly.</p>
+            <ul class="shots">
+              <li data-t="0:00">Ice poured into a bowl, close and loud</li>
+              <li data-t="0:03">Tin lid lifted, slow push in</li>
+              <li data-t="0:07">Mother-of-pearl spoon, one scoop</li>
+              <li data-t="0:10">Doorbell. Cut to black with the title.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="reel">
+          <div class="reel-media"><img src="img/gen/eggs.jpg" alt="Deviled eggs topped with caviar"><div class="hook">How much caviar do I need for 8 people?</div></div>
+          <div class="reel-body">
+            <h4>Host math</h4>
+            <p>Talking-head plus overhead B-roll. Answers a real question and drives straight to the right tin size.</p>
+            <ul class="shots">
+              <li data-t="0:00">Question on screen, said to camera</li>
+              <li data-t="0:03">The rule of thumb, with the tins lined up on the counter</li>
+              <li data-t="0:09">Three ways to stretch a tin across a party</li>
+              <li data-t="0:15">“Save this for your next dinner party”</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="block">
+      <div class="block-head">
+        <h3>Email: the launch send</h3>
+        <p>Laid out the way it would be built in Klaviyo: one idea, one main button and a useful section people keep.</p>
+      </div>
+      <div class="email-wrap">
+        <div class="client">
+          <div class="client-bar"><i></i><i></i><i></i></div>
+          <div class="client-meta">
+            <div><b>Caviar Star</b> &lt;hello@…&gt;</div>
+            <div class="sub">Your new favorite half hour 🥂</div>
+            <div class="pre">Fall hosting starts before dinner. Here's how to own it.</div>
+          </div>
+          <div class="email">
+            <div class="em-brand">Caviar Star</div>
+            <div class="em-hero"><img src="img/gen/champagne.jpg" alt="Champagne glasses and caviar on a fall table"></div>
+            <div class="em-body">
+              <div class="kick">Introducing</div>
+              <h4>The Osetra Hour</h4>
+              <p>Before the roast comes out, before anyone sits down, there's the best half hour of the night. Open a tin, pour something cold and let the evening start early.</p>
+              <a class="em-btn" href="#campaign">Shop the Osetra Hour kit</a>
+            </div>
+            <div class="em-three">
+              <div><img src="img/gen/chips.jpg" alt=""><b>On kettle chips</b><span>Crème fraîche, a small spoonful and done.</span></div>
+              <div><img src="img/gen/potato.jpg" alt=""><b>On crispy potatoes</b><span>Hot, salty and crunchy under cool pearls.</span></div>
+              <div><img src="img/gen/blini.jpg" alt=""><b>On warm blini</b><span>The classic, ready in five minutes.</span></div>
+            </div>
+            <div class="em-math"><b>Host math: about 1 oz per guest</b><span>That's for a pre-dinner bite. Planning a caviar-forward night? Go a little higher.</span></div>
+            <div class="em-foot">Caviar Star · Ocean Isle Beach, NC · Unsubscribe</div>
+          </div>
+        </div>
+        <div class="notes">
+          <div class="note">
+            <h5>Subject line A/B</h5>
+            <p class="alt">A: Your new favorite half hour 🥂</p>
+            <p class="alt">B: The 1 oz rule every fall host should know</p>
+            <p style="margin-top:8px">A sells the mood and B leads with something useful. Test on 20% of the list and send the winner to the rest.</p>
+          </div>
+          <div class="note">
+            <h5>The flow after it</h5>
+            <ul>
+              <li>Day 0: Launch (this email)</li>
+              <li>Day 3: Recipes, to people who clicked and didn't buy</li>
+              <li>Day 7: “Order by Thursday for the weekend”</li>
+              <li>Nov 1: Hand off to the gifting campaign</li>
+            </ul>
+          </div>
+          <div class="note">
+            <h5>Segments</h5>
+            <p>Past Osetra buyers get the kit first. Lapsed customers get the recipes email. New subscribers get a welcome version of it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Print -->
+    <div class="block">
+      <div class="print">
+        <div>
+          <div class="eyebrow">Event & print</div>
+          <h3 style="font-size:clamp(28px,3.4vw,40px);margin:14px 0 16px">An in-store tasting night menu card</h3>
+          <p class="muted">The campaign runs in the real world too: a tasting night at the shop, a 5×7 card on every table and a QR code that puts guests on the email list. It's also built to be photographed, so the night turns into content the next morning.</p>
+          <p class="muted" style="margin-top:14px">The same layout works as a sell sheet for restaurant and retail partners by swapping the menu for the tin sizes and the ordering info.</p>
+        </div>
+        <div class="card" aria-label="Menu card design">
+          <div class="kick">Caviar Star presents</div>
+          <h4>The Osetra Hour</h4>
+          <div class="date">A fall tasting · Friday · 5 to 7 pm</div>
+          <hr>
+          <dl>
+            <div><dt>Kettle chip & crème fraîche</dt><dd>Osetra, chive</dd></div>
+            <div><dt>Crispy fingerling</dt><dd>Osetra, smoked salt, dill</dd></div>
+            <div><dt>Deviled egg</dt><dd>Osetra, lemon zest</dd></div>
+            <div><dt>Warm buckwheat blini</dt><dd>Osetra, cultured butter</dd></div>
+          </dl>
+          <hr>
+          <div class="fine">Scan to take the Osetra Hour home · #TheOsetraHour</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calendar -->
+    <div class="block">
+      <div class="block-head">
+        <h3>The first two weeks</h3>
+        <p>Every channel has a job. Social builds interest, Pinterest collects searches, email converts and the event makes new content.</p>
+      </div>
+      <div class="cal" id="cal"></div>
+      <div class="legend">
+        <span class="c-ig">Instagram</span><span class="c-tt">TikTok / Reels</span><span class="c-pin">Pinterest</span><span class="c-fb">Facebook</span><span class="c-em">Email</span><span class="c-evt">Event</span>
+      </div>
+    </div>
+
+    <!-- Measure -->
+    <div class="block">
+      <div class="block-head"><h3>How I'd know it worked</h3></div>
+      <div class="measure">
+        <div><b>Saves & shares</b><p>The real signal on food content. If people save the host math post, the playbook pillar is working.</p></div>
+        <div><b>Pinterest clicks</b><p>Outbound clicks to recipe and product pages through the season.</p></div>
+        <div><b>Revenue per email</b><p>Tracked per send in Klaviyo, compared against last fall's promos.</p></div>
+        <div><b>#TheOsetraHour tags</b><p>Customer posts we can repost, with permission, to feed the next round.</p></div>
+      </div>
+      <p class="disclaimer">Unsolicited spec work made for an interview with Great Atlantic Trading. It isn't affiliated with or endorsed by Caviar Star. I made the concept images with AI tools to show the art direction; the final assets would be shot on-site.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== WHAT I USE ===================== -->
+<section id="tools">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow">04 · What I use</div>
+      <h2 style="margin:18px 0 24px">Creative first, technical when it helps.</h2>
+      <p>I've spent 20 years on the web. Running my own store taught me what makes someone buy, and running content for a local business taught me what makes them follow along.</p>
+      <p>I use AI tools the way a good editor uses a team: I pick the idea, direct the work, check every claim, and nothing goes out until I'd put my name on it. When a tool doesn't exist, like the Ad Studio or the dashboard, I build it.</p>
+    </div>
+    <div class="tools">
+      <div><h4>Social & content</h4><div><span>Instagram</span><span>Facebook</span><span>Pinterest</span><span>TikTok / Reels</span><span>Meta Business Suite</span><span>Content calendars</span><span>Blogging</span></div></div>
+      <div><h4>Creative</h4><div><span>AI image & video tools</span><span>Claude</span><span>Motion graphics</span><span>3D product renders</span><span>Web & email design</span><span>Print ads</span></div></div>
+      <div><h4>Ecommerce & data</h4><div><span>Marketplace selling</span><span>Product listings & pricing</span><span>Google Analytics 4</span><span>Search Console</span><span>Google Business Profile</span><span>SEO</span></div></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="process">
+      <div><b>Brief</b><p>Who's buying, and the one idea that gets them there.</p></div>
+      <div><b>Plan</b><p>A one-page plan and a shot list, back to you for review.</p></div>
+      <div><b>Make</b><p>Photos, video, captions, email and graphics, sized for every channel.</p></div>
+      <div><b>Measure</b><p>Revenue per email, saves, clicks and units sold, then do more of what worked.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Let's talk</div>
+    <h2>What should we feature <em>next?</em></h2>
+    <p>Give me the brief. I'll come back with the content, the plan and the numbers I'll measure.</p>
+    <div class="email-line"><code>mikecavallo@gmail.com</code><button type="button" class="btn btn-dark" id="copy-email">Copy email</button></div>
+    <div class="hero-ctas" style="margin-top:18px">
+      <a class="btn btn-line" href="mailto:mikecavallo@gmail.com">Email me</a>
+      <a class="btn btn-line" href="https://www.instagram.com/callingalldogsny/" target="_blank" rel="noopener">Instagram I run</a>
+    </div>
+  </div>
+</section>
+<div class="viewer" id="viewer" hidden role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+  <div class="viewer-bar"><span id="viewer-title"></span><span class="viewer-hint">Scroll inside to play</span><button type="button" id="viewer-close">Close ✕</button></div>
+  <iframe id="viewer-frame" title="" src="about:blank"></iframe>
+</div>
+<footer>© <span id="yr"></span> Mike Cavallo</footer>
+
+<script>
+const posts = [
+  {img:"hero", fmt:"Carousel · launch", title:"Welcome to the Osetra Hour", cap:"Fall hosting has a secret: the best part of the night happens before dinner.\n\nSwipe for the Osetra Hour: one tin, four easy pairings and 30 minutes everyone remembers.\n\nSave this for your next dinner party. 🥂\n#TheOsetraHour", why:"Launch post. It names the ritual and gives people a reason to save it right away."},
+  {img:"chips", fmt:"Reel", title:"Caviar on…, ranked", cap:"We ranked the least fancy things to put Osetra on. Number one surprised us. 👀\n\nTell us your pick below.\n#TheOsetraHour", why:"Reach driver. The high-low pairing invites comments and stitches."},
+  {img:"spoon", fmt:"Single image", title:"Meet Osetra", cap:"Nutty, buttery, with a clean finish. Osetra is the one we reach for when the leaves start turning.\n\nTap to shop.", why:"Product hero. A clean, shoppable image keeps the grid premium."},
+  {img:"eggs", fmt:"Carousel · recipe", title:"The deviled egg, upgraded", cap:"Your Thanksgiving deviled eggs, but make them unforgettable.\n\nRecipe in the slides. Save it now and thank us in November.", why:"Saveable recipe. It ties Osetra to a dish people already plan to make."},
+  {img:"bump", fmt:"Reel · trend", title:"The caviar bump", cap:"Fall party trick: the caviar bump. Off the back of the hand, chased with something cold.\n\nTag who's doing this with you this weekend.", why:"Trend content. The tag call-to-action grows reach to new hosts."},
+  {img:"table", fmt:"Single image", title:"Set the table", cap:"6pm. Candles lit. Tin on ice. Doorbell.\n\nThis is the Osetra Hour.", why:"Mood post. It sells the feeling and keeps the grid editorial."},
+  {img:"potato", fmt:"Reel · how-to", title:"Crispy potatoes + Osetra", cap:"Hot, crunchy, salty potatoes under cool Osetra. 3 ingredients, 20 minutes.\n\nFull recipe in the caption below. ⬇️", why:"Recipe Reel. Pinned on Pinterest too, where people search for fall appetizers."},
+  {img:"champagne", fmt:"Carousel · pairing", title:"What to pour", cap:"Champagne is the classic. A dry Riesling is the surprise. Ice-cold vodka is the old-school move.\n\nWhat's in your glass?", why:"Conversation post. Pairings make it easy for people to answer in the comments."},
+  {img:"gift", fmt:"Single image · gifting", title:"The Osetra Hour, gift boxed", cap:"For the friend who always hosts.\n\nThe Osetra Hour kit, ready to give. Link in bio.", why:"Bridge to gifting. It hands off into the holiday campaign in November."},
+];
+const grid = document.getElementById('grid');
+function show(i){
+  const p = posts[i];
+  const pi = document.getElementById('post-img'); delete pi.dataset.ph; pi.src = `img/gen/${p.img}.jpg`;
+  document.getElementById('post-img').alt = p.title;
+  document.getElementById('post-fmt').textContent = p.fmt;
+  document.getElementById('post-title').textContent = p.title;
+  document.getElementById('post-cap').textContent = p.cap;
+  document.getElementById('post-why').textContent = "Why it's here: " + p.why;
+  grid.querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-pressed', i===j));
+}
+posts.forEach((p,i)=>{
+  const b = document.createElement('button');
+  b.setAttribute('aria-label', p.title);
+  b.innerHTML = `<img src="img/gen/${p.img}.jpg" alt="" loading="lazy">`;
+  b.onclick = () => show(i);
+  grid.appendChild(b);
+});
+show(0);
+
+const days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const plan = [
+  [["ig","Launch carousel"],["em","Launch email"]],
+  [["tt","“Caviar on…, ranked”"]],
+  [["pin","Recipe pins ×5"],["ig","Meet Osetra"]],
+  [["ig","Story: host math poll"],["fb","Event invite"]],
+  [["tt","Setting the Osetra Hour"],["ig","Set the table"]],
+  [["ig","Deviled egg recipe"]],
+  [["ig","Stories: weekend reposts"]],
+  [["tt","Host math"],["em","Recipes (clicked, no buy)"]],
+  [["ig","The caviar bump"]],
+  [["pin","Pairing pins"],["ig","What to pour"]],
+  [["fb","Event reminder"],["em","Order by Thursday"]],
+  [["evt","Tasting night"],["ig","Live Stories"]],
+  [["tt","Tasting night recap"],["ig","Crispy potatoes"]],
+  [["ig","Gift box teaser"]],
+];
+const cal = document.getElementById('cal');
+days.forEach(d=>{const e=document.createElement('div');e.className='dow';e.textContent=d;cal.appendChild(e)});
+plan.forEach((items,i)=>{
+  const e = document.createElement('div'); e.className='day';
+  e.innerHTML = `<div class="d">Day ${i+1}<span class="m"> · ${days[i%7]}</span></div>` + items.map(([c,t])=>`<div class="chip c-${c}">${t}</div>`).join('');
+  cal.appendChild(e);
+});
+
+// Interactive listings open in a full-window viewer so they get the room they're designed for.
+const viewer = document.getElementById('viewer'), vFrame = document.getElementById('viewer-frame');
+let lastFocus = null;
+function openViewer(src, title){
+  lastFocus = document.activeElement;
+  vFrame.src = src; vFrame.title = title;
+  document.getElementById('viewer-title').textContent = title;
+  viewer.hidden = false; document.body.style.overflow = 'hidden';
+  document.getElementById('viewer-close').focus();
+}
+function closeViewer(){
+  viewer.hidden = true; vFrame.src = 'about:blank'; document.body.style.overflow = '';
+  if (lastFocus) lastFocus.focus();
+}
+document.getElementById('viewer-close').addEventListener('click', closeViewer);
+addEventListener('keydown', e => { if (e.key === 'Escape' && !viewer.hidden) closeViewer(); });
+document.querySelectorAll('[data-open]').forEach(el => el.addEventListener('click', e => {
+  e.preventDefault(); openViewer(el.dataset.open, el.dataset.title);
+}));
+document.getElementById('yr').textContent = new Date().getFullYear();
+const nav = document.getElementById('nav');
+addEventListener('scroll', ()=>nav.classList.toggle('scrolled', scrollY>10), {passive:true});
+const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+document.getElementById('copy-email').addEventListener('click', e => {
+  const b = e.currentTarget, done = () => { b.textContent = 'Copied'; setTimeout(() => b.textContent = 'Copy email', 1600); };
+  try { navigator.clipboard.writeText('mikecavallo@gmail.com').then(done, () => {}); } catch (err) {}
+});
+</script>
+</body>
+</html>
