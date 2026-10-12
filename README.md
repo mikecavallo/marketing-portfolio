@@ -1,4 +1,4 @@
-# Mike Cavallo · Marketing Portfolio
+# Michael Cavallo · Marketing Portfolio
 
 Static site served with GitHub Pages. Open `index.html`.
 
