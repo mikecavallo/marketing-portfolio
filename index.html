@@ -406,6 +406,7 @@ footer{background:var(--green);color:#9fb1ab;font-size:13px;text-align:center;pa
 .cs-card .go{margin-top:6px;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#d9b871}
 @media(max-width:980px){.cs-card,.cs-card.big{grid-column:span 3}}
 @media(max-width:640px){.cs-grid{grid-template-columns:1fr}.cs-card,.cs-card.big{grid-column:auto}}
+.cs-full{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:32px}.cs-full .btn{background:#d9b871;color:#07080c}.cs-full span{color:#a69c8a;font-size:15px}
 .cs-film{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:center;margin-top:clamp(56px,7vw,96px)}
 @media(max-width:860px){.cs-film{grid-template-columns:1fr}}
 .cs-film video{width:100%;aspect-ratio:9/16;border-radius:14px;background:#000;display:block;box-shadow:0 0 0 1px rgba(217,184,113,.35),0 30px 80px rgba(0,0,0,.6);max-width:100%}
@@ -624,7 +625,7 @@ document.addEventListener('error', e => {
         <div class="img"><img src="caviar/thumbs/atlas.jpg" alt="Chart of every caviar drawn to scale" ></div>
         <div class="body"><div class="num">31 caviars</div><h3>The Caviar Atlas</h3><p>Where each roe comes from, every pearl drawn to scale in its real color, and a quiz that ends at the right tin.</p><div class="go">Explore the atlas →</div></div>
       </button>
-      <a class="cs-card" href="https://claude.ai/artifact/BqZfW5BJNVk9rmV8LsQbQE" target="_blank" rel="noopener">
+      <a class="cs-card" href="https://showcase-review-showcase.vercel.app/turntables/" target="_blank" rel="noopener">
         <div class="img"><img src="caviar/thumbs/turntables.jpg" alt="A balsamic box turning in the light" ></div>
         <div class="body"><div class="num">181 loops</div><h3>Turntables</h3><p>A ten-second loop of every product turning in the light, ready for product pages, ads and Stories.</p><div class="go">See the turntables ↗</div></div>
       </a>
@@ -636,11 +637,12 @@ document.addEventListener('error', e => {
         <div class="img"><img src="caviar/thumbs/ads.jpg" alt="Three sale ads in 9:16, 4:5 and 1:1" ></div>
         <div class="body"><div class="num">11 ads · 3 sizes</div><h3>Sale ads, ready to run</h3><p>Every caviar on sale plus serving pieces, as motion and stills for Stories, Feed and Square, with Meta and TikTok copy inside the character limits. Every price checked against the store.</p><div class="go">See the ads →</div></div>
       </button>
-      <a class="cs-card big" href="https://claude.ai/artifact/3psJCsBJpVYWbD9GbQ2xJE" target="_blank" rel="noopener">
+      <a class="cs-card big" href="https://showcase-review-showcase.vercel.app/ad-studio/" target="_blank" rel="noopener">
         <div class="img"><img src="caviar/thumbs/studio.jpg" alt="The Ad Studio controls beside a live preview" ></div>
         <div class="body"><div class="num">Self-serve</div><h3>The Ad Studio</h3><p>Pick any product and size, it pulls the live price, you write the headline, and it exports the video in all three sizes. The next sale takes minutes, not a designer.</p><div class="go">Open the studio ↗</div></div>
       </a>
     </div>
+    <div class="cs-full"><a class="btn" href="https://showcase-review-showcase.vercel.app/showcase/" target="_blank" rel="noopener">Open the full showcase, every piece in high quality ↗</a><span>Includes six fixes I found on caviarstar.com while building it.</span></div>
 
     <div class="cs-film">
       <video src="caviar/spec-film/great-atlantic-commercial.mp4" poster="caviar/spec-film/poster.jpg" controls playsinline preload="metadata" aria-label="Great Atlantic spec brand film"></video>
